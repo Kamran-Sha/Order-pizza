@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset ="UTF-8">
+</head>
+<body>
+
+	<form>
+  		<select id="Pizza" onchange="myFunction()">
+    		<option>Velg pizza</option>
+    		<option value = "290" type ="number" >Ansjosfest</option>
+    		<option value = "180">BBQ Delight</option>
+    		<option value = "278">Hummus og ost</option>  
+  		</select>
+	</form>
+
+	<input  id="Voksne" type ="number" >
+
+	<form>	
+  		<select id="Tilbehør" onchange="myFunction()">
+    		<option>Velg tilbehør</option>
+    		<option value ="60">Brus</option>
+    		<option value ="35">Aioli</option>  
+  		</select>
+	</form>
+
+<input  id="Voksne" type ="number" ><br>
+
+<button id ="myFunction()" >Bestill</button>
+<p id = "utverdi"> </p>
+<p id = "utverdiTO"></p>
+
+Total: <p id = "sum"></p>
+
+	<script>
+		function myFunction() {
+			var P = document.getElementById("Pizza").value;  
+			var T = document.getElementById("Tilbehør").value;
+  			document.getElementById("utverdi").innerHTML = P;
+  			document.getElementById("utverdiTO").innerHTML = T;
+  			document.getElementById("sum").innerHTML = number(P)+number(T); }
+	</script>
+
+
+</body>
+</html>
